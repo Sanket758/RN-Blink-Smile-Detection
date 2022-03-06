@@ -8,6 +8,7 @@ import {
   Slider,
   TouchableWithoutFeedback,
   Dimensions,
+  Alert,
 } from 'react-native';
 import {RNCamera} from 'react-native-camera';
 
@@ -290,6 +291,23 @@ export default class CameraScreen extends React.Component {
               ]}
               onPress={this.takePicture.bind(this)}>
               <Text style={styles.flipText}> SNAP </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[
+                styles.flipButton,
+                styles.picButton,
+                {flex: 0.3, alignSelf: 'flex-end'},
+              ]}
+              onPress={() => Alert.alert('Simple Button pressed')}>
+              <Text style={styles.flipText}> CALL </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[
+                styles.flipButton,
+                styles.picButton,
+              ]}
+              onPress={() => Alert.alert('Simple Button pressed')}>
+              <Text style={styles.flipText}> SMS </Text>
             </TouchableOpacity>
           </View>
         </View>

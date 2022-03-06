@@ -1,10 +1,13 @@
 import React from 'react';
-import {WebView} from 'react-native-webview';
+import ActionButton from '../../components/ActionButton';
+import { Alert } from "react-native";
+
 const Calibration = () => {
+  const funct = () => Alert.alert('Simple Button pressed');
   return (
-    <WebView
-      source={{uri: 'https://www.google.com/'}}
-      style={{marginTop: 20}}
+    <ActionButton
+      title={"Adana"}
+      onClick={funct}
     />
   );
 };
